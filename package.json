@@ -1,0 +1,15 @@
+{
+  "name": "advice-generator-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Sung Jin Cho",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "^2.10.3"
+  }
+}

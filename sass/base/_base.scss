@@ -1,0 +1,66 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/colors";
+
+/**************************/
+/* Tweaking Text Level Styles: strike-through */
+/**************************/
+
+del, s {
+  text-decoration: line-through;
+}
+
+mark::before, mark::after, del::before, del::after, ins::before, ins::after, s::before, s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+s::before {
+  content: ' [strike-through start] ';
+}
+s::after {
+  content: ' [strike-through end] ';
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+/**************************/
+/* Body */
+/**************************/
+
+body {
+  padding: 0 f.rem(15px);
+    font-size: f.rem(28px);
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--color-dark-blue);
+
+    height: 100%;
+    
+    display: grid;
+    place-content: center;
+}
+
+/**************************/
+/* Main */
+/**************************/
+
+@media (width > 37.5em) {
+
+}
+
+@media (width > 71.25em) {
+
+}
+
