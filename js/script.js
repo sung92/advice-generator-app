@@ -49,6 +49,7 @@ const renderSpinner = function (container) {
 
 const getMarkup = function(advice) {
     return `
+    <p class="visually-hidden">New advice generated</p>
     <h2 class="advice__id">Advice #${advice.id}</h2>
     <blockquote class="advice__text">"${advice.advice}"</blockquote>
     `
