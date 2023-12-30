@@ -46,7 +46,7 @@ const renderSpinner = function (container) {
     const markup = `
       <div class="spinner">
         <svg>
-          <use href=".images/icon-dice.svg"></use>
+          <use href="./images/icon-dice.svg"></use>
         </svg>
       </div>
     `
