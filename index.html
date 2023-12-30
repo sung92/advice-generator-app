@@ -21,21 +21,25 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1 class="visually-hidden">Advice generator tool</h1>
-  </header>
-
+  
   <main>
+    <h1 class="visually-hidden">Advice generator tool</h1>
+
     <div class="advice-wrapper">
-      <div class="advice-container">
-        <h2 class="advice__id">Welcome<!-- Advice ID goes here --></h2>
+      <div class="spinner visually-hidden">
+        <svg>
+          <use href="./images/icons.svg#icon-loader"></use>
+        </svg>
+      </div>
+      <div class="advice-container" aria-live="polite">
+        <h2 class="advice__id">Welcome</h2>
         <blockquote class="advice__text">Click on the button to generate an advice!</blockquote>
       </div>
       <picture>
         <source srcset="./images/pattern-divider-desktop.svg" media="(min-width: 25rem)">
         <img class="divider" src="./images/pattern-divider-mobile.svg" alt="">
       </picture>
-      <button class="advice-button"><span class="visually-hidden">Dice</span><img src="./images/icon-dice.svg"></button>
+      <button class="advice-button"><span class="visually-hidden">Dice to get a new random advice</span><img src="./images/icon-dice.svg"></button>
     </div>
   </main>
   

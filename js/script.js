@@ -1,5 +1,6 @@
 const advContainer = document.querySelector(".advice-container");
 const buttonAdv = document.querySelector(".advice-button")
+const spinner = document.querySelector(".spinner");
 
 // On click button
 buttonAdv.addEventListener('click', async function () {
@@ -43,14 +44,7 @@ const getJSON = async function (url) {
 
 const renderSpinner = function (container) {
     container.innerHTML = "";
-    const markup = `
-      <div class="spinner">
-        <svg>
-          <use href="./images/icons.svg#icon-loader"></use>
-        </svg>
-      </div>
-    `
-    container.insertAdjacentHTML('afterbegin', markup);
+    spinner.classList.toggle("visually-hidden");
 };
 
 const getMarkup = function(advice) {
@@ -63,4 +57,5 @@ const getMarkup = function(advice) {
 const renderAdvice = function(container, markup) {
     container.innerHTML = "";
     container.insertAdjacentHTML('afterbegin', markup);
+    spinner.classList.toggle("visually-hidden");
 }
